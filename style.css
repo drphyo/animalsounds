@@ -1,0 +1,157 @@
+body {
+    background-color: #FFF0F5;
+    margin: 0;
+}
+.header {
+    font-family: 'Barriecito', cursive;
+    font-size: 6rem;
+    color: #FBA1B7;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.animal {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 10px solid #FFDBAA;
+    border-radius: 30px;
+    font-family: 'Barriecito', cursive;
+    font-size: 7rem;
+    color: #F11A7B;
+}
+
+.letter {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.dog {
+    background-image: url(./photos/dog.jpg);
+    background-size: cover;
+}
+
+.cat {
+    background-image: url(./photos/cat.jpg);
+    background-size: cover;
+}
+
+.sheep {
+    background-image: url(./photos/sheep.jpg);
+    background-size: cover;
+}
+
+.horse {
+    background-image: url(./photos/horse.jpg);
+    background-size: cover;
+}
+
+.bird {
+    background-image: url(./photos/bird.jpg);
+    background-size: cover;
+}
+
+footer {
+    height: 18vh;
+    background-color: #FBA1B7;
+    text-align: center;
+    font-family: 'Barriecito', cursive;
+    font-size: 3rem;
+    color: #F11A7B;
+    padding: 8px;
+}
+
+@media (max-width: 1200px) {
+   .container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin-top: 0;
+   }
+
+   .dog {
+    grid-area: 1 / 1 / 2 / 3;
+   }
+
+   .cat {
+    grid-area: 1 / 3 / 2 / 5;
+   }
+
+   .sheep {
+    grid-area: 1 / 5 / 2 / 7;
+   }
+
+   .horse {
+    grid-area: 2 / 2 / 3 / 4;
+   }
+
+   .bird {
+    grid-area: 2 / 4 / 3 / 6;
+   }
+
+   .animal {
+    margin: 20px;
+   }
+}
+
+@media (max-width: 700px){
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 0;
+        margin-bottom: 30px;
+       }
+    
+       .dog {
+        grid-area: 1 / 1 / 2 / 3;
+       }
+    
+       .cat {
+        grid-area: 1 / 3 / 2 / 5;
+       }
+    
+       .sheep {
+        grid-area: 2 / 1 / 3 / 3;
+       }
+    
+       .horse {
+        grid-area: 2 / 3 / 3 / 5;
+       }
+    
+       .bird {
+        grid-area: 3 / 2 / 4 / 4;
+       }
+       .animal {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        font-size: 4rem;
+       }
+
+       .header {
+        font-size: 3rem;
+       }
+
+       footer {
+        font-size: 2rem;
+       }
+}
+
+@media (max-width: 280px){
+    .animal {
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+        font-size: 4rem;
+       }
+}
