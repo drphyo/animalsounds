@@ -6,11 +6,13 @@ button[i].addEventListener("click", function (){
 
     var letter = this.textContent;
     playSound (letter);
+    addBottonAnimation (letter);
 })
 }
 document.addEventListener("keydown", function(event){
     var pressedKey = event.key;
     playSound (pressedKey);
+    addBottonAnimation (pressedKey);
 })
 
 function playSound(hit){
@@ -44,4 +46,13 @@ function playSound(hit){
 
         default: console.log(letter);
     }
+}
+
+function addBottonAnimation(currentKey){
+    var activeBotton = document.querySelector("."+currentKey);
+    activeBotton.classList.add("pressed");
+
+    setTimeout (function(){
+        activeBotton.classList.remove("pressed");
+    }, 100)
 }
